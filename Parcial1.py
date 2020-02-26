@@ -4,16 +4,21 @@ from tkinter import messagebox as mBox
 from tkinter import Menu
 from tkinter import ttk
 
-#funcion radio
-def funcion_radio():
-	selector=opcion.get()
-	if selector==1: ventana.congure(background=red)
-
 #Funcion click
 def click():
+    int contador
 	ventana=tk.Tk()
 	ventana.title("Calificacion")
 	uno_click=uno.get()
+    if uno_click == 14: contador=contador+20
+    dos_click=dos.get()
+    if dos_click == 6: contador=contador+20
+    opcion_click=opcion.get()
+    if opcion_click==1: contador=contador+20
+    opcion1_click=opcion1.get()
+    if opcion1_click==1: contador=contador+20
+
+
 
 #Definir ventana
 ventana=tk.Tk()
@@ -35,26 +40,26 @@ dosCapturado.grid(column=1,row=1)
 ttk.Label(ventana, text= "¿Cuanto es 30/2?").grid (column=1,row=2)
 
 opcion=tk.IntVar()
-radio1=tk.Radiobutton(ventana,text="15",variable=opcion,value=1,command=funcion_radio)
+radio1=tk.Radiobutton(ventana,text="15",variable=opcion,value=1)
 radio1.grid(column=0,row=3,sticky=tk.W)
 
-radio2=tk.Radiobutton(ventana,text="10",variable=opcion,value=2,command=funcion_radio)
+radio2=tk.Radiobutton(ventana,text="10",variable=opcion,value=2)
 radio2.grid(column=1,row=3,sticky=tk.W)
 
-radio3=tk.Radiobutton(ventana,text="6",variable=opcion,value=3,command=funcion_radio)
+radio3=tk.Radiobutton(ventana,text="6",variable=opcion,value=3)
 radio3.grid(column=2,row=3,sticky=tk.W)
 
 #Pregunta 4
 ttk.Label(ventana, text= "¿Cuanto vale x si: x+2=0?").grid (column=1,row=4)
 
 opcion1=tk.IntVar()
-r1=tk.Radiobutton(ventana,text="x=-2",variable=opcion1,value=1,command=funcion_radio)
+r1=tk.Radiobutton(ventana,text="x=-2",variable=opcion1,value=1)
 r1.grid(column=0,row=5,sticky=tk.W)
 
-r2=tk.Radiobutton(ventana,text="x=2",variable=opcion1,value=2,command=funcion_radio)
+r2=tk.Radiobutton(ventana,text="x=2",variable=opcion1,value=2)
 r2.grid(column=1,row=5,sticky=tk.W)
 
-r3=tk.Radiobutton(ventana,text="x=0",variable=opcion1,value=3,command=funcion_radio)
+r3=tk.Radiobutton(ventana,text="x=0",variable=opcion1,value=3)
 r3.grid(column=2,row=5,sticky=tk.W)
 
 #Pregunta 5
